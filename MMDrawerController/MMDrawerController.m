@@ -339,6 +339,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
         }
     }
     else {
+        [self.centerViewController.view endEditing:true];
         [self setAnimatingDrawer:animated];
         UIViewController * sideDrawerViewController = [self sideDrawerViewControllerForSide:drawerSide];
         if (self.openSide != drawerSide) {
@@ -1059,6 +1060,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
                 break;
             }
             else {
+                [self.centerViewController.view endEditing:true];
                 self.startingPanRect = self.centerContainerView.frame;
             }
         }
